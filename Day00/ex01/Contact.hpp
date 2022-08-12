@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 17:30:15 by mkarim            #+#    #+#             */
-/*   Updated: 2022/08/12 12:37:23 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/08/12 16:25:39 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@
 class Contact
 {
 	public:
-		std::string		firstName;
-		std::string		lastName;
-		std::string		nickName;
-		long	phoneNumber;
+		std::string	firstName;
+		std::string	lastName;
+		std::string nickname;
+		std::string	phoneNumber;
 		std::string	darketSecret;
-		Contact();
-		~Contact();
 };
 
 #endif
