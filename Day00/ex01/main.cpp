@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 09:06:19 by mkarim            #+#    #+#             */
-/*   Updated: 2022/10/17 12:10:42 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/10/17 12:41:14 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,11 +136,14 @@ void    search_cmd(PhoneBook &phBook)
     }
     else
     {
-        std::cout << "User ID    : " << user_id << std::endl;
-        std::cout << "Frist Name : " << phBook.contact[user_id-1].firstName << std::endl;
-        std::cout << "Last Name  : " << phBook.contact[user_id-1].lastName << std::endl;
-        std::cout << "Nick Name  : " << phBook.contact[user_id-1].nickname << std::endl;
+        std::cout << "User ID        : " << user_id << std::endl;
+        std::cout << "Frist Name     : " << phBook.contact[user_id-1].firstName << std::endl;
+        std::cout << "Last Name      : " << phBook.contact[user_id-1].lastName << std::endl;
+        std::cout << "Nick Name      : " << phBook.contact[user_id-1].nickname << std::endl;
+        std::cout << "Phone Number   : " << phBook.contact[user_id-1].nickname << std::endl;
+        std::cout << "Darkest Secret : " << phBook.contact[user_id-1].nickname << std::endl;
     }
+    std::cout << std::endl;
 }
 
 int main()
