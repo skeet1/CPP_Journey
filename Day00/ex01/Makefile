@@ -6,13 +6,13 @@
 #    By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/07 16:36:14 by mkarim            #+#    #+#              #
-#    Updated: 2022/08/12 12:34:44 by mkarim           ###   ########.fr        #
+#    Updated: 2022/10/16 13:16:36 by mkarim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 
-CC = g++
+CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
