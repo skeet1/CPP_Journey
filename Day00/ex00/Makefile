@@ -6,13 +6,13 @@
 #    By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/07 16:36:14 by mkarim            #+#    #+#              #
-#    Updated: 2022/08/11 16:08:28 by mkarim           ###   ########.fr        #
+#    Updated: 2022/10/16 11:59:07 by mkarim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
 
-CC = g++
+CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -26,7 +26,7 @@ $(NAME) : $(OBJ)
 	$(CC) $(FLAGS) $(SRC) -o $(NAME)
 
 %.o : %.cpp
-	$(CC) $(FLAGS) -c $<
+	$(CC) $(FLAGS) $< -c
 
 clean :
 	rm $(OBJ)

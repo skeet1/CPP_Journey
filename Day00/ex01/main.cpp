@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 09:06:19 by mkarim            #+#    #+#             */
-/*   Updated: 2022/10/17 12:41:14 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/10/20 13:17:42 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,18 @@
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
+int     check_eof()
+{
+    if (std::cin.eof())
+    {
+        std::cout << "EOF ...!" << std::endl;
+        return 1;
+    }
+    return (0);
+}
 
 int    add_cmd(PhoneBook &phBook)
 {
-    int fileds = 0;
     std::string firstName;
     std::string lastName;
     std::string nickname;
@@ -26,42 +34,22 @@ int    add_cmd(PhoneBook &phBook)
     std::string darkestSecret;
 
     std::cout << "Enter your first name" << std::endl;
-    if (std::getline(std::cin, firstName)) fileds++;
-    if (std::cin.eof())
-    {
-        std::cout << "EOF ...!" << std::endl;
-        return 1;
-    }
+    std::getline(std::cin, firstName);
+    if (check_eof()) return (1);
     std::cout << "Enter your last name" << std::endl;
-    if (std::getline(std::cin, lastName)) fileds++;
-    if (std::cin.eof())
-    {
-        std::cout << "EOF ...!" << std::endl;
-        return 1;
-    }
+    std::getline(std::cin, lastName);
+    if (check_eof()) return (1);
     std::cout << "Enter your nickname" << std::endl;
-    if (std::getline(std::cin, nickname)) fileds++;
-    if (std::cin.eof())
-    {
-        std::cout << "EOF ...!" << std::endl;
-        return 1;
-    }
+    std::getline(std::cin, nickname);
+    if (check_eof()) return (1);
     std::cout << "Enter your phone number" << std::endl;
-    if (std::getline(std::cin, phoneNumber)) fileds++;
-    if (std::cin.eof())
-    {
-        std::cout << "EOF ...!" << std::endl;
-        return 1;
-    }
+    std::getline(std::cin, phoneNumber);
+    if (check_eof()) return (1);
     std::cout << "Enter your darkest secret" << std::endl;
-    if (std::getline(std::cin, darkestSecret)) fileds++;
-    if (std::cin.eof())
-    {
-        std::cout << "EOF ...!" << std::endl;
-        return 1;
-    }
+    std::getline(std::cin, darkestSecret);
+    if (check_eof()) return (1);
     static int i;
-    if (fileds == 5)
+    if (!firstName.empty() && !lastName.empty() && !nickname.empty() && !phoneNumber.empty() && !darkestSecret.empty())
     {
         Contact newContact;
         newContact.firstName    = firstName;
@@ -155,11 +143,7 @@ int main()
         std::cout << "Hello USER, Please Enter one of these three Commands" << std::endl;
         std::cout << "ADD, SEARCH, EXIT" << std::endl;
         std::getline(std::cin, cmd);
-        if (std::cin.eof())
-        {
-            std::cout << "EOF ...!" << std::endl;
-            return (0);
-        }
+        if (check_eof()) return (0);
         if (cmd.compare("ADD") == 0)
         {
             if (add_cmd(phBook))
