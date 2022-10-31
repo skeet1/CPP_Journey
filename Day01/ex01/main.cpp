@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 15:36:59 by mkarim            #+#    #+#             */
-/*   Updated: 2022/10/31 09:38:18 by mkarim           ###   ########.fr       */
+/*   Created: 2022/10/31 09:42:35 by mkarim            #+#    #+#             */
+/*   Updated: 2022/10/31 10:23:05 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int main()
 {
-    Zombie myZombie("karim");
-    myZombie.announce();
-    myZombie.newZombie("NewZombie");
-    myZombie.randomChump("Random");
-	while (1);
+    Zombie *zmb = zombieHorde(6, "something");
+    for (int i = 0; i < 6; i++)
+    {
+        zmb[i].announce();
+    }
+    return 0;
 }

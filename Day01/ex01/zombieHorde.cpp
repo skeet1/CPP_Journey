@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 15:36:59 by mkarim            #+#    #+#             */
-/*   Updated: 2022/10/31 09:38:18 by mkarim           ###   ########.fr       */
+/*   Created: 2022/10/31 10:10:02 by mkarim            #+#    #+#             */
+/*   Updated: 2022/10/31 10:31:31 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+Zombie* Zombie::zombieHorde( int N, std::string name )
 {
-    Zombie myZombie("karim");
-    myZombie.announce();
-    myZombie.newZombie("NewZombie");
-    myZombie.randomChump("Random");
-	while (1);
+    // int i;
+    // Zombie *zombie[N];
+
+    // i = 0;
+    // while (i < N)
+    // {
+    //     zombie[i] = new Zombie(name);
+    //     if (!zombie[i])
+    //         return (zombie[i]);
+    //     i++;
+    // }
+    // return (zombie[0]);
+
+    Zombie* zmbs = new Zombie[N];
 }
