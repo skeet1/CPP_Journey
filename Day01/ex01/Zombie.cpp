@@ -6,15 +6,15 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 09:40:29 by mkarim            #+#    #+#             */
-/*   Updated: 2022/10/31 09:41:19 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/03 17:30:02 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string Name)
+Zombie::Zombie()
 {
-    name = Name;
+    std::cout << "Constructor called for " << std::endl;
 }
 
 void    Zombie::announce(void)
@@ -25,4 +25,9 @@ void    Zombie::announce(void)
 Zombie::~Zombie()
 {
     std::cout << "Destructor called for " << this->name << std::endl;
+}
+
+void    Zombie::setName(std::string Name)
+{
+    this->name = Name;
 }
