@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 18:25:19 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/04 13:18:11 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/05 10:35:33 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,12 @@
 
 class Weapon {
     private:
-        std::string type;
+        std::string _type;
     public:
-        std::string getType()
-        {
-            return type;
-        }
-        void    setType(std::string type)
-        {
-            this->type = type;
-        }
-}
+        Weapon();
+        Weapon(std::string type);
+        std::string getType();
+        void setType(std::string type);
+};
 
 #endif

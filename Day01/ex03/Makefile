@@ -6,7 +6,7 @@
 #    By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/03 18:18:56 by mkarim            #+#    #+#              #
-#    Updated: 2022/11/03 18:24:51 by mkarim           ###   ########.fr        #
+#    Updated: 2022/11/05 10:49:16 by mkarim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,17 +16,19 @@ CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
+HEADER = Weapon.hpp HumanA.hpp HumanB.hpp
 
-OBJ = $(SRC:.cpp=.o) 
+SRC = Weapon.cpp HumanA.cpp HumanB.cpp main.cpp
+
+OBJ = $(SRC:.cpp=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(CC) $(FLAGS) $(SRC) -o $(NAME)
 
-%.o : %.c
-	$(CC) $(FLAGS) -c $< 
+%.o : %.cpp
+	$(CC) $(FLAGS) -c $<
 
 clean :
 	rm $(OBJ)
