@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 09:42:35 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/03 17:40:18 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/08 09:52:40 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ int main()
 {
     Zombie *z;
 
-    z = zombieHorde(-5, "chi haja");
-    for (int i = 0; i < 5; i++)
+    int N = 3;
+    z = zombieHorde(N, "chi haja");
+    for (int i = 0; i < N; i++)
         z[i].announce();
     delete [] z;
     return (0);
