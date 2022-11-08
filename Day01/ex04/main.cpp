@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:03:53 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/05 11:59:48 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/08 09:36:59 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,10 @@
 #include <cstring>
 #include <fstream>
 
-std::string edit_line(std::string line, int ind, int len, std::string s2)
+void edit_line(std::string &line, int ind, int len, std::string s2)
 {
-    std::string newLine;
-    int i;
-
-    for (i = 0; i < ind; i++)
-        newLine += line[i];
-    newLine += s2;
-    i += len;
-    for (; i < (int) line.length(); i++)
-        newLine += line[i];
-    return newLine;
+    line.erase(ind, len);
+    line.insert(ind, s2);
 }
 
 int main(int argc, char **argv)
@@ -41,18 +33,18 @@ int main(int argc, char **argv)
     std::ifstream myFile(fileName);
     std::ofstream newFile(fileName + ".replace");
     std::string line;
-    int i = 1;
+    size_t start = 0;
     while (std::getline(myFile, line))
     {
-        if (line.find(s1) <= line.length())
+        start = 0;
+        while (line.find(s1, start) != std::string::npos)
         {
-            std::cout << "found in line : " << i << "\n";
-            newFile << edit_line(line, line.find(s1), s1.length(), s2);
+            start = line.find(s1, start);
+            edit_line(line, line.find(s1, start), s1.length(), s2);
+            start += s2.length();
         }
-        else
-            newFile << line;
+        newFile << line;
         newFile << "\n";
-        i++;
     }
     return (0);
 }
