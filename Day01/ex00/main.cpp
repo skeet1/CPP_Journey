@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:36:59 by mkarim            #+#    #+#             */
-/*   Updated: 2022/10/31 09:38:18 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/08 09:49:16 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 int main()
 {
+    
     Zombie myZombie("karim");
+    Zombie *Z;
     myZombie.announce();
-    myZombie.newZombie("NewZombie");
+    Z = myZombie.newZombie("NewZombie");
     myZombie.randomChump("Random");
-	while (1);
+    delete Z;
+    return 0;
 }
