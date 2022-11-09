@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 18:25:14 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/05 10:59:31 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/08 12:50:22 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,5 @@ int main()
         club.setType("some other type of club");
         jim.attack();
     }
-    
     return 0;
 }
