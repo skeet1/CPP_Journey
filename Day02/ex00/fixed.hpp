@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 08:30:41 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/09 18:12:44 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/11 18:51:25 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ private:
 public:
     Fixed();
     Fixed(Fixed &obj);
-    int getRawBits();
-    void setRawBits(int const raw);
-    ~Fixed();
     Fixed &operator=(Fixed &obj);
+    ~Fixed();
+    int getRawBits( void ) const ;
+    void setRawBits(int const raw);
 };
 
 #endif
