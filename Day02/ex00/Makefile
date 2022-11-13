@@ -6,7 +6,7 @@
 #    By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 15:05:11 by mkarim            #+#    #+#              #
-#    Updated: 2022/11/09 08:36:59 by mkarim           ###   ########.fr        #
+#    Updated: 2022/11/12 19:40:21 by mkarim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(NAME) : $(OBJ)
 	$(CC) $(FLAGS) -c $<
 
 clean :
-	rm $(OBJ)
+	rm -rf $(OBJ)
 
 fclean : clean
 	rm -rf $(NAME)

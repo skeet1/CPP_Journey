@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 08:34:48 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/11 12:49:08 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/12 17:44:01 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Fixed::Fixed(const Fixed &obj)
 Fixed::Fixed(const int val)
 {
     std::cout << "Int constructor called" << std::endl;
-    this->value = val << this->rawBits;
+    this->value = val << rawBits;
 }
 
 Fixed::Fixed(const float val)
@@ -52,11 +52,11 @@ Fixed &Fixed::operator=(const Fixed &obj)
 }
 
 float Fixed::toFloat(void) const {
-    return (float(this->value) / (float)(1 << this->rawBits));
+    return (float(this->value) / (float)(1 << rawBits));
 }
 
 int Fixed::toInt(void) const {
-    return (this->value / (1 << this->rawBits));
+    return (this->value / (1 << rawBits));
 }
 
 std::ostream &operator<<( std::ostream &os, const Fixed &obj )
