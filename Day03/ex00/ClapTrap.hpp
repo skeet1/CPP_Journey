@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 08:02:09 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/14 10:16:19 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/14 13:16:18 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class ClapTrap
         ClapTrap(ClapTrap const& obj);
         ClapTrap &operator=(ClapTrap const& obj);
         ~ClapTrap();
+
+        int getDamage();
 
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);

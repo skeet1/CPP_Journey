@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 08:02:06 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/14 10:29:41 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/14 13:15:37 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(void) {
     ClapTrap  c2(s2);
 
     c1.attack(s2);
-    c2.takeDamage(1);
+    c2.takeDamage(c1.getDamage());
     c2.beRepaired(10);
     return 0;
 }
