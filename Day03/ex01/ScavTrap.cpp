@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 10:31:38 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/14 13:28:57 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/14 14:53:18 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ ScavTrap::ScavTrap(std::string name)
     _energyPoints = 50;
     _attackDamage = 20;
     std::cout << "ScavTrap Constructor Called\n";
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &obj)
+{
+    this->_name = obj._name;
+    return *this;
 }
 
 ScavTrap::~ScavTrap()
