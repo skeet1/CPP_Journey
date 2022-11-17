@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:35:32 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/15 11:00:48 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/17 09:07:46 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,43 @@ std::string Animal::getType() const
 void    Animal::makeSound() const
 {
     std::cout << "Animal Sound\n";
+}
+
+// WrongAnimal 
+
+WrongAnimal::WrongAnimal()
+{
+    _type = "WrongAnimal";
+    std::cout << "WrongAnimal Default Constructor Called\n";
+}
+
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &obj)
+{
+    std::cout << "WrongAnimal Copy assingment operator Called\n";
+    this->_type = obj._type;
+    return *this;
+}
+
+WrongAnimal::WrongAnimal(const WrongAnimal &obj)
+{
+    _type = "WrongAnimal";
+    std::cout << "WrongAnimal Copy Constructor Called\n";
+    *this = obj;
+}
+
+WrongAnimal::~WrongAnimal()
+{
+    std::cout << "WrongAnimal Destructor Called\n";
+}
+
+std::string WrongAnimal::getType() const
+{
+    return _type;
+}
+
+void    WrongAnimal::makeSound() const
+{
+    std::cout << "WrongAnimal Sound\n";
 }
 
 // Dog
@@ -111,5 +148,37 @@ Cat::~Cat()
 void    Cat::makeSound() const 
 {
     std::cout << "Cat Sound\n";
+}
+
+// WrongCat
+
+WrongCat::WrongCat()
+{
+    _type = "WrongCat";
+    std::cout << "WrongCat Default Constructor Called\n";
+}
+
+WrongCat &WrongCat::operator=(const WrongCat &obj)
+{
+    std::cout << "WrongCat Copy assingment operator Called\n";
+    this->_type = obj._type;
+    return *this;
+}
+
+WrongCat::WrongCat(const WrongCat &obj)
+{
+    _type = "WrongCat";
+    std::cout << "WrongCat Copy Constructor Called\n";
+    *this = obj;
+}
+
+WrongCat::~WrongCat()
+{
+    std::cout << "WrongCat Destructor Called\n";
+}
+
+void    WrongCat::makeSound() const 
+{
+    std::cout << "WrongCat Sound\n";
 }
 

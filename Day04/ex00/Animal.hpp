@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:28:42 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/15 11:05:35 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/17 09:11:17 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,29 @@ class Cat : public Animal {
         Cat(const Cat &obj);
         ~Cat();
         Cat &operator=(const Cat &obj);
+        
+        void makeSound() const;
+};
+
+class WrongAnimal {
+    protected:
+        std::string _type;
+    public:
+        WrongAnimal();
+        WrongAnimal(const WrongAnimal &obj);
+        virtual ~WrongAnimal();
+        WrongAnimal &operator=(const WrongAnimal &obj);
+        
+        std::string getType() const;
+        virtual void makeSound() const;
+};
+
+class WrongCat : public WrongAnimal {
+    public:
+        WrongCat();
+        WrongCat(const WrongCat &obj);
+        ~WrongCat();
+        WrongCat &operator=(const WrongCat &obj);
         
         void makeSound() const;
 };

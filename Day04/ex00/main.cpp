@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:32:24 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/15 11:05:19 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/17 09:11:32 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,12 @@ int main()
     delete meta;
     delete j;
     delete i;
+
+    // const WrongAnimal *wa = new WrongAnimal();
+    // const WrongAnimal *wc = new WrongCat();
+
+    // wa->makeSound();
+    // wc->makeSound();
+
     return 0;
 }
