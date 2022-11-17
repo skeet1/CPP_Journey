@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:28:42 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/17 08:58:21 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/17 09:15:57 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Animal {
         Animal &operator=(const Animal &obj);
         
         std::string getType() const;
-        void makeSound() const = 0;
+        virtual void makeSound() const = 0;
 };
 
 class Dog : public Animal {
