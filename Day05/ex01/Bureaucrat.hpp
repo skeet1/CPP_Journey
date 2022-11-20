@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 10:08:10 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/19 18:39:40 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/20 18:25:27 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <exception>
+#include "Form.hpp"
 
 class Bureaucrat {
     private:
@@ -47,6 +48,8 @@ class Bureaucrat {
                     return ("Grade too low bro");
                 }
         };
+
+        void    signForm(Form &obj);
 };
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat & obj);
