@@ -6,14 +6,14 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:24:54 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/20 19:58:51 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/21 18:27:00 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-Form::Form(): _name("noName"), _gradeToSign(0), _gradeToExecute(0)
+Form::Form(): _name("noName"), _isSigned(false), _gradeToSign(150), _gradeToExecute(150)
 {
     std::cout << "Form Default Constructor Called\n";
 }
@@ -39,6 +39,12 @@ Form &Form::operator=(const Form &obj)
 Form::~Form()
 {
     std::cout << "Form Destructor Called\n";
+}
+
+std::ostream &operator<<(std::ostream &out, Form &obj)
+{
+    out << "Form name is : " << obj.getName() << ", and it is " << (obj.getIsSigned() ? "" : "NOT ") << "signed, the grade to sign is : " << obj.getGradeToSign() << ", and the grade to execute is : " << obj.getGradeToExecute();
+    return out;
 }
 
 std::string Form::getName()

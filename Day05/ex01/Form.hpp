@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 10:15:20 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/20 19:44:45 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/21 18:22:10 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class Bureaucrat;
 class Form
 {
     private:
-        std::string _name;
-        bool        _isSigned;
-        int const   _gradeToSign;
-        int const   _gradeToExecute;
+        std::string const   _name;
+        bool                _isSigned;
+        int const           _gradeToSign;
+        int const           _gradeToExecute;
     public:
         Form();
         Form(std::string name, bool isSigned, int gradeToSign, int gradeToExecute);
@@ -53,5 +53,7 @@ class Form
 
         void    beSigned(Bureaucrat &obj);
 };
+
+std::ostream &operator<<(std::ostream &out, Form &obj);
 
 #endif
