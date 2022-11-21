@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 10:08:10 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/19 18:39:40 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/21 18:11:07 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 class Bureaucrat {
     private:
-        const std::string _name;
-        int _grade;
+        std::string const   _name;
+        int                 _grade;
     public:
         Bureaucrat();
         Bureaucrat(const Bureaucrat & obj);

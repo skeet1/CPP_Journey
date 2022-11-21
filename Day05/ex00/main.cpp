@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 16:49:20 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/19 18:39:09 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/21 18:14:37 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,18 @@ int main()
         Bureaucrat b1("Mohamed", 1);
         std::cout << b1 << std::endl;
         b1.decrementGrade();
+        b1.decrementGrade();
+        b1.decrementGrade();
+        b1.decrementGrade();
+        std::cout << b1 << std::endl;
+        b1.decrementGrade();
         std::cout << b1 << std::endl;
         b1.incrementGrade();
-        // std::cout << b1 << std::endl;
+        std::cout << b1 << std::endl;
         b1.incrementGrade();
-        // std::cout << b1 << std::endl;
+        b1.incrementGrade();
+        b1.incrementGrade();
+        std::cout << b1 << std::endl;
     }
     catch( std::exception &e)
     {

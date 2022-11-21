@@ -6,13 +6,13 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 10:11:22 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/19 17:58:46 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/21 18:13:29 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat()
+Bureaucrat::Bureaucrat(): _name("NoName"), _grade(150)
 {
     std::cout << "Default Constructor Called\n";
 }
