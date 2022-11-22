@@ -6,11 +6,12 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 12:58:49 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/22 09:53:03 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/22 15:43:42 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include <ctime>
 
 RobotomyRequestForm::RobotomyRequestForm(): AForm("Roboto", false, 72, 45)
 {
@@ -44,6 +45,7 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm("Roboto", fa
 {
     std::cout << "Roboto Constructor Called\n";
     _target = target;
+    srand(time(NULL));
     int val = rand() % 2;
     if (val & 1)
     {
@@ -51,7 +53,7 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm("Roboto", fa
     }
     else
     {
-        std::cout << "robotmy failed\n";
+        std::cout << "the " << target << " failed\n";
     }
 }
 
