@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 19:39:12 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/26 10:23:15 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/26 16:58:16 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void print(T n)
 }
 
 template <typename T>
-void iter(T *arr, size_t len, void (f)(T))
+void iter(T const *arr, size_t len, void (f)(T))
 {
     for (size_t i = 0; i < len; i++)
     {
