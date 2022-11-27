@@ -6,19 +6,19 @@
 #    By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/14 08:01:36 by mkarim            #+#    #+#              #
-#    Updated: 2022/11/27 21:39:16 by mkarim           ###   ########.fr        #
+#    Updated: 2022/11/27 21:10:49 by mkarim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = easyfind
+NAME = Span
 
 CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-HEADER = easyfind.hpp
+HEADER = Span.hpp
 
-SRC = main.cpp 
+SRC = main.cpp Span.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
