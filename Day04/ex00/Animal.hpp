@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 10:28:42 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/17 09:11:17 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/26 16:06:55 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ class WrongAnimal {
         WrongAnimal &operator=(const WrongAnimal &obj);
         
         std::string getType() const;
-        virtual void makeSound() const;
+        void makeSound() const;
 };
 
 class WrongCat : public WrongAnimal {

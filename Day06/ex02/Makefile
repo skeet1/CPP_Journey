@@ -5,20 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/14 08:01:36 by mkarim            #+#    #+#              #
-#    Updated: 2022/11/28 13:04:23 by mkarim           ###   ########.fr        #
+#    Created: 2022/11/22 16:36:22 by mkarim            #+#    #+#              #
+#    Updated: 2022/11/25 09:06:57 by mkarim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = MutantStack
+NAME = out
 
 CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-HEADER = MutantStack.hpp
+HEADER = Base.hpp
 
-SRC = main.cpp 
+SRC = main.cpp Base.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
