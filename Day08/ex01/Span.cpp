@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 09:51:33 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/27 21:00:38 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/28 18:56:50 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,15 +82,4 @@ unsigned int Span::longestSpan()
     it_e = this->_vec.end();
     it_e--;
     return (*it_e - *it_b);
-}
-
-void    Span::addNumbers(std::vector<int>::const_iterator first, std::vector<int>::const_iterator second)
-{
-    if (second < first)
-        throw std::invalid_argument("first greater than second");
-    while (this->_vec.size() < this->_N && first != second)
-    {
-        this->_vec.push_back(*first);
-        first++;
-    }
 }

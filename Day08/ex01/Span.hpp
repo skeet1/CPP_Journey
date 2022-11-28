@@ -6,7 +6,7 @@
 /*   By: mkarim <mkarim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 09:40:54 by mkarim            #+#    #+#             */
-/*   Updated: 2022/11/27 21:38:39 by mkarim           ###   ########.fr       */
+/*   Updated: 2022/11/28 19:35:57 by mkarim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <algorithm>
 #include <vector>
 #include <exception>
+#include <list>
+#include <deque>
 
 #define MAX_INT 2147483647
 
@@ -35,8 +37,18 @@ class Span {
 
         unsigned int shortestSpan();
         unsigned int longestSpan();
-
-        void    addNumbers(std::vector<int>::const_iterator first, std::vector<int>::const_iterator second);
+        template < typename it>
+        void    addNumbers(it b, it e)
+        {
+            while (b != e)
+            {
+                if (this->_vec.size() < this->_N)
+                    this->_vec.push_back(*b);
+                else
+                    throw std::invalid_argument("can't add number because vector already full");
+                b++;
+            }
+        }
 };
 
 #endif
